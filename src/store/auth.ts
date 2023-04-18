@@ -5,14 +5,14 @@ import router from "../router";
 export const useAuthStore = defineStore("auth", () => {
   const isLoggedIn = ref(false);
 
-  function login(user: string, pass: string): boolean {
+  async function login(user: string, pass: string) {
     if (user === "user" && pass === "pass") {
       isLoggedIn.value = true;
       localStorage.setItem("isLoggedIn", isLoggedIn.value + "");
-      router.push({ name: "discovery" });
-      return true;
+      router.replace({ name: "discovery" });
+    } else {
+      alert("Auth err");
     }
-    return false;
   }
 
   function logout(): void {

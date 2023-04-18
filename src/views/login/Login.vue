@@ -10,10 +10,7 @@ const data = ref({
 const store = useAuthStore();
 
 function Login() {
-  if (!store.login(data.value.user, data.value.pass)) {
-    alert('Login Fail')
-  }
-  console.log('Fazer login');
+  store.login(data.value.user, data.value.pass)
 }
 
 </script>

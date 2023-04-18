@@ -1,7 +1,7 @@
 import Login from "./views/login/Login.vue";
 import Discovery from "./views/discovery/Discovery.vue";
 import Settings from "./views/settings/Settings.vue";
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import { useAuthStore } from "./store/auth";
 
 const routes = [
@@ -12,7 +12,7 @@ const routes = [
 
 const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes, // short for `routes: routes`
 });
 router.beforeEach(async (to, from) => {
