@@ -1,20 +1,25 @@
 @import "./../../style.scss";
+
 #login-container {
   form {
     display: flex;
     flex-direction: column;
+
     input {
       padding: $padding-medium;
       border-radius: 8px;
       border: 1px solid #ccc;
     }
-    button {
+
+    input[type="submit"] {
       margin-top: $padding-large;
       background: black;
       color: white;
     }
+
     #bottom-text {
       margin-top: $padding-large;
+
       span:last-child {
         text-decoration: underline;
       }
